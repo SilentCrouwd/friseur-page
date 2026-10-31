@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf5ec;
+  --color-surface: #ffffff;
+  --color-ink: #1f2933;
+  --color-plum: #6b4f7a;
+  --color-plum-dark: #563f63;
+  --color-pink: #f3c9d5;
+  --color-pink-light: #fbe6ec;
+  --font-display: ui-serif, Georgia, serif;
+  --font-body: system-ui, sans-serif;
+  --radius-lg: 0.5rem;
+  --shadow-soft: 0 10px 30px -10px rgb(107 79 122 / 0.35);
+  --shadow-lift: 0 14px 34px -10px rgb(107 79 122 / 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    main > section {
+      animation: section-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 50%;
+    }
+
+    @keyframes section-reveal {
+      from {
+        opacity: 0.1;
+        transform: translateY(4rem) scale(0.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  }
+}

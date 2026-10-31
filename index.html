@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeinFriseur</title>
+  </head>
+  <body
+    class="min-h-screen bg-cream font-body text-base leading-relaxed text-ink"
+  >
+    <a
+      href="#main-content"
+      class="sr-only fixed left-4 top-4 z-50 rounded-lg bg-plum px-4 py-2 text-white shadow-soft focus:not-sr-only focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+    >
+      Zum Inhalt springen
+    </a>
+    <header
+      class="sticky top-0 z-40 border-b border-plum/10 bg-cream/95 shadow-soft backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8"
+      >
+        <a
+          href="#start"
+          class="flex shrink-0 items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plum-dark"
+        >
+          <span
+            class="grid size-11 place-items-center rounded-lg bg-plum font-display text-2xl text-white shadow-soft"
+            aria-hidden="true"
+            >M</span
+          >
+          <span class="font-display text-xl font-semibold text-ink"
+            >MeinFriseur</span
+          >
+        </a>
+
+        <nav
+          id="site-navigation"
+          aria-label="Hauptnavigation"
+          class="absolute inset-x-0 top-full hidden bg-cream px-4 pb-4 shadow-soft md:static md:block md:bg-transparent md:p-0 md:shadow-none"
+        >
+          <ul class="flex flex-col gap-1 md:flex-row md:items-center md:gap-2">
+            <li>
+              <a
+                href="#start"
+                class="block rounded-lg px-3 py-2 font-medium text-ink transition hover:bg-pink-light hover:text-plum-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                >Start</a
+              >
+            </li>
+            <li>
+              <a
+                href="#galerie"
+                class="block rounded-lg px-3 py-2 font-medium text-ink transition hover:bg-pink-light hover:text-plum-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                >Galerie</a
+              >
+            </li>
+            <li>
+              <a
+                href="#oeffnungszeiten"
+                class="block rounded-lg px-3 py-2 font-medium text-ink transition hover:bg-pink-light hover:text-plum-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                >Öffnungszeiten</a
+              >
+            </li>
+            <li>
+              <a
+                href="#kontakt"
+                class="block rounded-lg px-3 py-2 font-medium text-ink transition hover:bg-pink-light hover:text-plum-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex shrink-0 items-center gap-2">
+          <a
+            href="tel:+491234567890"
+            aria-label="MeinFriseur anrufen: 01234 567890"
+            class="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-plum px-3 text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-plum-dark hover:shadow-lift focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark motion-reduce:transition-none sm:px-4"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 5.5A2.5 2.5 0 0 1 5.5 3h2A1.5 1.5 0 0 1 9 4.2l.8 3.2a1.5 1.5 0 0 1-.7 1.7l-1.4.9a15.7 15.7 0 0 0 6.5 6.5l.9-1.4a1.5 1.5 0 0 1 1.7-.7l3.2.8a1.5 1.5 0 0 1 1.2 1.5v2A2.5 2.5 0 0 1 18.7 21C10 20.5 3.5 14 3 5.5Z"
+              />
+            </svg>
+            <span class="hidden text-sm font-semibold sm:inline">Anrufen</span>
+          </a>
+          <button
+            type="button"
+            aria-controls="site-navigation"
+            aria-expanded="false"
+            aria-label="Menü öffnen"
+            class="grid size-11 place-items-center rounded-lg text-plum-dark transition hover:bg-pink-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark md:hidden"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 7h16M4 12h16M4 17h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" tabindex="-1">
+      <section
+        id="start"
+        aria-labelledby="hero-title"
+        class="relative flex min-h-[calc(100svh-4.25rem)] flex-col overflow-hidden"
+      >
+        <figure class="absolute inset-0" aria-hidden="true">
+          <div class="absolute inset-0 bg-pink">
+            <div
+              class="absolute inset-4 grid place-items-center rounded-lg border border-plum/20 sm:inset-6 md:inset-8"
+            >
+              <svg
+                viewBox="0 0 64 64"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="size-20 text-plum/70"
+              >
+                <rect x="11" y="13" width="42" height="38" rx="5" />
+                <circle cx="25" cy="27" r="5" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m15 46 12-11 8 7 6-5 8 9"
+                />
+              </svg>
+            </div>
+            <span
+              class="absolute bottom-24 left-0 right-0 text-center font-display text-xl text-ink/70"
+              >Bildplatzhalter – MeinFriseur</span
+            >
+          </div>
+          <figcaption class="sr-only">
+            Bildplatzhalter für den Friseursalon
+          </figcaption>
+        </figure>
+        <div
+          class="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
+        >
+          <div
+            class="w-full max-w-3xl rounded-lg border border-white/70 bg-white/55 p-5 shadow-lift backdrop-blur-xl backdrop-saturate-150 sm:p-8 lg:ml-auto lg:p-10 lg:text-right"
+          >
+            <p class="mb-4 font-semibold tracking-wide text-plum-dark">
+              Willkommen bei MeinFriseur
+            </p>
+            <h1
+              id="hero-title"
+              class="font-display text-4xl font-semibold leading-tight text-ink sm:text-5xl lg:text-6xl"
+            >
+              Ihr Friseur in Musterstadt –
+              <span class="text-plum-dark">rufen Sie uns an</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg lg:ml-auto">
+              Zeit für einen neuen Lieblingslook? Wir nehmen uns Zeit für Sie
+              und beraten Sie persönlich.
+            </p>
+            <a
+              href="tel:+491234567890"
+              class="group mt-8 inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 font-semibold text-white shadow-soft transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-plum-dark hover:shadow-lift active:translate-y-0 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark motion-reduce:transition-none"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                class="size-5 transition-transform duration-300 group-hover:scale-110 motion-reduce:transition-none"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 5.5A2.5 2.5 0 0 1 5.5 3h2A1.5 1.5 0 0 1 9 4.2l.8 3.2a1.5 1.5 0 0 1-.7 1.7l-1.4.9a15.7 15.7 0 0 0 6.5 6.5l.9-1.4a1.5 1.5 0 0 1 1.7-.7l3.2.8a1.5 1.5 0 0 1 1.2 1.5v2A2.5 2.5 0 0 1 18.7 21C10 20.5 3.5 14 3 5.5Z"
+                />
+              </svg>
+              Jetzt anrufen: 01234 567890
+            </a>
+            <ul
+              aria-label="Ihre Vorteile"
+              class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end"
+            >
+              <li
+                class="rounded-lg bg-pink-light px-4 py-2 font-medium text-ink"
+              >
+                <span class="font-semibold text-plum-dark">15 Jahre</span>
+                Erfahrung
+              </li>
+              <li
+                class="rounded-lg bg-pink-light px-4 py-2 font-medium text-ink"
+              >
+                Persönliche Beratung
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p
+          class="relative z-10 mx-auto mb-6 flex items-center gap-2 rounded-full bg-white/95 px-5 py-2 text-center text-sm font-medium text-ink shadow-soft"
+          role="status"
+          aria-live="polite"
+        >
+          <span
+            id="opening-status-indicator"
+            aria-hidden="true"
+            class="size-2.5 shrink-0 rounded-full bg-plum"
+          ></span>
+          <span id="opening-status">Öffnungszeiten werden geladen …</span>
+        </p>
+      </section>
+      <section
+        id="galerie"
+        aria-labelledby="gallery-title"
+        class="bg-pink-light/60"
+      >
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div class="mx-auto mb-10 max-w-2xl text-center">
+            <p class="mb-3 font-semibold tracking-wide text-plum-dark">
+              Einblicke
+            </p>
+            <h2
+              id="gallery-title"
+              class="font-display text-3xl font-semibold text-ink sm:text-4xl"
+            >
+              Unser Salon &amp; unsere Arbeit
+            </h2>
+            <p class="mt-4">
+              Ein kleiner Eindruck von unserem Salon und den Looks, die hier
+              entstehen.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+            <figure
+              class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
+            >
+              <div
+                role="img"
+                aria-label="Platzhalter: entspannte Atmosphäre im Salon"
+                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="size-12 text-plum/70 sm:size-16"
+                >
+                  <rect x="11" y="13" width="42" height="38" rx="5" />
+                  <circle cx="25" cy="27" r="5" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15 46 12-11 8 7 6-5 8 9"
+                  />
+                </svg>
+              </div>
+              <figcaption class="px-2 py-3 font-medium text-ink">
+                Wohlfühlen im Salon
+              </figcaption>
+            </figure>
+            <figure
+              class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
+            >
+              <div
+                role="img"
+                aria-label="Platzhalter: moderner Haarschnitt"
+                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink-light"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="size-12 text-plum/70 sm:size-16"
+                >
+                  <rect x="11" y="13" width="42" height="38" rx="5" />
+                  <circle cx="25" cy="27" r="5" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15 46 12-11 8 7 6-5 8 9"
+                  />
+                </svg>
+              </div>
+              <figcaption class="px-2 py-3 font-medium text-ink">
+                Schnitt mit Persönlichkeit
+              </figcaption>
+            </figure>
+            <figure
+              class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
+            >
+              <div
+                role="img"
+                aria-label="Platzhalter: Farbberatung im Salon"
+                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="size-12 text-plum/70 sm:size-16"
+                >
+                  <rect x="11" y="13" width="42" height="38" rx="5" />
+                  <circle cx="25" cy="27" r="5" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15 46 12-11 8 7 6-5 8 9"
+                  />
+                </svg>
+              </div>
+              <figcaption class="px-2 py-3 font-medium text-ink">
+                Farbe, die zu Ihnen passt
+              </figcaption>
+            </figure>
+            <figure
+              class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
+            >
+              <div
+                role="img"
+                aria-label="Platzhalter: professionelles Styling"
+                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink-light"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="size-12 text-plum/70 sm:size-16"
+                >
+                  <rect x="11" y="13" width="42" height="38" rx="5" />
+                  <circle cx="25" cy="27" r="5" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15 46 12-11 8 7 6-5 8 9"
+                  />
+                </svg>
+              </div>
+              <figcaption class="px-2 py-3 font-medium text-ink">
+                Styling für besondere Momente
+              </figcaption>
+            </figure>
+            <figure
+              class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
+            >
+              <div
+                role="img"
+                aria-label="Platzhalter: freundliches Team im Salon"
+                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="size-12 text-plum/70 sm:size-16"
+                >
+                  <rect x="11" y="13" width="42" height="38" rx="5" />
+                  <circle cx="25" cy="27" r="5" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15 46 12-11 8 7 6-5 8 9"
+                  />
+                </svg>
+              </div>
+              <figcaption class="px-2 py-3 font-medium text-ink">
+                Mit Herz für Ihr Haar
+              </figcaption>
+            </figure>
+            <figure
+              class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
+            >
+              <div
+                role="img"
+                aria-label="Platzhalter: Ergebnis eines Friseurbesuchs"
+                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink-light"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="size-12 text-plum/70 sm:size-16"
+                >
+                  <rect x="11" y="13" width="42" height="38" rx="5" />
+                  <circle cx="25" cy="27" r="5" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15 46 12-11 8 7 6-5 8 9"
+                  />
+                </svg>
+              </div>
+              <figcaption class="px-2 py-3 font-medium text-ink">
+                Ihr neuer Lieblingslook
+              </figcaption>
+            </figure>
+          </div>
+          <div class="mt-10 text-center">
+            <a
+              href="tel:+491234567890"
+              class="inline-flex min-h-12 items-center justify-center rounded-lg bg-plum px-6 py-3 font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-plum-dark hover:shadow-lift focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark motion-reduce:transition-none"
+              >Jetzt Termin anfragen: 01234 567890</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="oeffnungszeiten" aria-labelledby="hours-title">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8"
+        >
+          <div class="max-w-xl">
+            <p class="mb-3 font-semibold tracking-wide text-plum-dark">
+              Wir sind für Sie da
+            </p>
+            <h2
+              id="hours-title"
+              class="font-display text-3xl font-semibold text-ink sm:text-4xl"
+            >
+              Öffnungszeiten
+            </h2>
+            <p class="mt-4">
+              Kommen Sie vorbei oder rufen Sie uns an – wir freuen uns auf Ihren
+              Besuch.
+            </p>
+            <a
+              href="tel:+491234567890"
+              class="mt-6 inline-flex min-h-12 items-center justify-center rounded-lg bg-plum px-5 py-3 font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-plum-dark hover:shadow-lift focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark motion-reduce:transition-none"
+              >Anrufen: 01234 567890</a
+            >
+          </div>
+          <div class="overflow-hidden rounded-lg bg-white shadow-soft">
+            <table class="w-full text-left">
+              <caption class="sr-only">
+                Öffnungszeiten von MeinFriseur
+              </caption>
+              <thead class="bg-pink-light text-ink">
+                <tr>
+                  <th scope="col" class="px-5 py-4 font-semibold">Tag</th>
+                  <th scope="col" class="px-5 py-4 text-right font-semibold">
+                    Öffnungszeiten
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-plum/10">
+                <tr data-weekday="1" class="transition-colors">
+                  <th scope="row" class="px-5 py-3 font-medium">
+                    Montag
+                    <span
+                      class="today-badge ml-2 hidden rounded-full bg-pink px-2 py-0.5 text-xs font-semibold text-ink"
+                      >Heute</span
+                    >
+                  </th>
+                  <td class="px-5 py-3 text-right">Geschlossen</td>
+                </tr>
+                <tr data-weekday="2" class="transition-colors">
+                  <th scope="row" class="px-5 py-3 font-medium">
+                    Dienstag
+                    <span
+                      class="today-badge ml-2 hidden rounded-full bg-pink px-2 py-0.5 text-xs font-semibold text-ink"
+                      >Heute</span
+                    >
+                  </th>
+                  <td class="px-5 py-3 text-right">09:00–18:00 Uhr</td>
+                </tr>
+                <tr data-weekday="3" class="transition-colors">
+                  <th scope="row" class="px-5 py-3 font-medium">
+                    Mittwoch
+                    <span
+                      class="today-badge ml-2 hidden rounded-full bg-pink px-2 py-0.5 text-xs font-semibold text-ink"
+                      >Heute</span
+                    >
+                  </th>
+                  <td class="px-5 py-3 text-right">09:00–18:00 Uhr</td>
+                </tr>
+                <tr data-weekday="4" class="transition-colors">
+                  <th scope="row" class="px-5 py-3 font-medium">
+                    Donnerstag
+                    <span
+                      class="today-badge ml-2 hidden rounded-full bg-pink px-2 py-0.5 text-xs font-semibold text-ink"
+                      >Heute</span
+                    >
+                  </th>
+                  <td class="px-5 py-3 text-right">09:00–18:00 Uhr</td>
+                </tr>
+                <tr data-weekday="5" class="transition-colors">
+                  <th scope="row" class="px-5 py-3 font-medium">
+                    Freitag
+                    <span
+                      class="today-badge ml-2 hidden rounded-full bg-pink px-2 py-0.5 text-xs font-semibold text-ink"
+                      >Heute</span
+                    >
+                  </th>
+                  <td class="px-5 py-3 text-right">09:00–18:00 Uhr</td>
+                </tr>
+                <tr data-weekday="6" class="transition-colors">
+                  <th scope="row" class="px-5 py-3 font-medium">
+                    Samstag
+                    <span
+                      class="today-badge ml-2 hidden rounded-full bg-pink px-2 py-0.5 text-xs font-semibold text-ink"
+                      >Heute</span
+                    >
+                  </th>
+                  <td class="px-5 py-3 text-right">09:00–14:00 Uhr</td>
+                </tr>
+                <tr data-weekday="0" class="transition-colors">
+                  <th scope="row" class="px-5 py-3 font-medium">
+                    Sonntag
+                    <span
+                      class="today-badge ml-2 hidden rounded-full bg-pink px-2 py-0.5 text-xs font-semibold text-ink"
+                      >Heute</span
+                    >
+                  </th>
+                  <td class="px-5 py-3 text-right">Geschlossen</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section
+        id="anfahrt"
+        aria-labelledby="location-title"
+        class="bg-pink-light/60"
+      >
+        <div
+          class="mx-auto grid max-w-7xl items-center gap-8 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-8"
+        >
+          <div>
+            <p class="mb-3 font-semibold tracking-wide text-plum-dark">
+              Ganz in Ihrer Nähe
+            </p>
+            <h2
+              id="location-title"
+              class="font-display text-3xl font-semibold text-ink sm:text-4xl"
+            >
+              So finden Sie uns
+            </h2>
+            <address class="mt-5 text-lg not-italic">
+              MeinFriseur<br />
+              Musterstraße 12<br />
+              12345 Musterstadt
+            </address>
+            <p class="mt-4">Wir freuen uns auf Ihren Besuch.</p>
+          </div>
+          <div
+            role="img"
+            aria-label="Kartenplatzhalter für Musterstraße 12 in Musterstadt"
+            class="grid aspect-[16/9] place-items-center rounded-lg bg-pink px-6 text-center shadow-soft"
+          >
+            <div>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                class="mx-auto mb-3 size-10 text-plum-dark"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+                />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+              <p class="font-semibold text-ink">Kartenansicht</p>
+              <p class="mt-1 text-sm text-ink">
+                Musterstraße 12, 12345 Musterstadt
+              </p>
+              <p class="mt-2 text-sm text-ink">
+                Demo-Platzhalter – keine eingebettete Karte
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="kontakt"
+        aria-labelledby="contact-title"
+        class="bg-pink-light/60"
+      >
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <p class="mb-3 font-semibold tracking-wide text-plum-dark">
+              Wir freuen uns auf Sie
+            </p>
+            <h2
+              id="contact-title"
+              class="font-display text-3xl font-semibold text-ink sm:text-4xl"
+            >
+              Lust auf einen neuen Look?
+            </h2>
+            <p class="mt-4">
+              Rufen Sie uns an oder schreiben Sie uns – wir sind gerne für Sie
+              da.
+            </p>
+          </div>
+          <div class="mx-auto mt-8 grid max-w-3xl gap-4 sm:grid-cols-2">
+            <a
+              href="tel:+491234567890"
+              class="group rounded-lg bg-white p-6 text-center shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark motion-reduce:transition-none"
+            >
+              <span class="block text-sm font-semibold text-plum-dark"
+                >Rufen Sie uns an</span
+              >
+              <span
+                class="mt-2 block font-display text-2xl font-semibold text-ink sm:text-3xl"
+                >01234 567890</span
+              >
+            </a>
+            <a
+              href="mailto:info@meinfriseur.example"
+              class="group rounded-lg bg-white p-6 text-center shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark motion-reduce:transition-none"
+            >
+              <span class="block text-sm font-semibold text-plum-dark"
+                >Schreiben Sie uns</span
+              >
+              <span
+                class="mt-2 block break-all font-display text-xl font-semibold text-ink sm:text-2xl"
+                >info@meinfriseur.example</span
+              >
+            </a>
+          </div>
+          <form
+            id="contact-form"
+            class="mx-auto mt-10 max-w-3xl rounded-lg bg-white p-5 shadow-soft sm:p-8"
+          >
+            <h3 class="font-display text-2xl font-semibold text-ink">
+              Oder schreiben Sie uns
+            </h3>
+            <p class="mt-2">
+              Das Formular dient in dieser Demo nur zur Vorschau. Es werden
+              keine Daten übertragen oder gespeichert.
+            </p>
+            <div class="mt-6 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="contact-name" class="mb-1.5 block font-medium"
+                  >Name</label
+                >
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  class="min-h-12 w-full rounded-lg bg-cream px-4 py-3 text-ink shadow-inner focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                />
+              </div>
+              <div>
+                <label for="contact-phone" class="mb-1.5 block font-medium"
+                  >Telefon</label
+                >
+                <input
+                  id="contact-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                  class="min-h-12 w-full rounded-lg bg-cream px-4 py-3 text-ink shadow-inner focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="contact-message" class="mb-1.5 block font-medium"
+                  >Nachricht</label
+                >
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full rounded-lg bg-cream px-4 py-3 text-ink shadow-inner focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                ></textarea>
+              </div>
+              <div class="sm:col-span-2">
+                <div class="flex items-start gap-3">
+                  <input
+                    id="privacy-consent"
+                    name="privacy-consent"
+                    type="checkbox"
+                    required
+                    class="mt-1 size-5 shrink-0 accent-plum focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                  />
+                  <label for="privacy-consent" class="text-sm">
+                    Ich habe die
+                    <a
+                      href="/datenschutz.html"
+                      class="font-semibold text-plum-dark underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark"
+                      >Datenschutzhinweise</a
+                    >
+                    zur Kenntnis genommen.
+                  </label>
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <button
+                  type="submit"
+                  class="inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-plum px-6 py-3 font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-plum-dark hover:shadow-lift focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-dark motion-reduce:transition-none sm:w-auto"
+                >
+                  Nachricht senden
+                </button>
+                <p
+                  id="form-status"
+                  role="status"
+                  aria-live="polite"
+                  class="mt-4 font-medium text-plum-dark"
+                  hidden
+                ></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-plum-dark text-white">
+      <div
+        class="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8"
+      >
+        <div>
+          <a
+            href="#start"
+            class="inline-flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          >
+            <span
+              class="grid size-10 place-items-center rounded-lg bg-white font-display text-xl font-semibold text-plum-dark"
+              aria-hidden="true"
+              >M</span
+            >
+            <span class="font-display text-xl font-semibold">MeinFriseur</span>
+          </a>
+          <p class="mt-4 text-sm">Ihr Friseur in Musterstadt</p>
+        </div>
+        <address class="not-italic">
+          <p class="font-semibold">Besuchen Sie uns</p>
+          <p class="mt-2">Musterstraße 12<br />12345 Musterstadt</p>
+          <a
+            href="tel:+491234567890"
+            class="mt-2 inline-block rounded-sm underline underline-offset-4 hover:text-pink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >01234 567890</a
+          >
+        </address>
+        <div>
+          <p class="font-semibold">Informationen</p>
+          <ul class="mt-2 space-y-2">
+            <li>
+              <a
+                href="/impressum.html"
+                class="rounded-sm underline underline-offset-4 hover:text-pink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >Impressum</a
+              >
+            </li>
+            <li>
+              <a
+                href="/datenschutz.html"
+                class="rounded-sm underline underline-offset-4 hover:text-pink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >Datenschutz</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="border-t border-white/20 px-4 py-4 text-center text-sm">
+        Demo-Seite – alle Angaben sind fiktiv und dienen nur zur Vorschau.
+      </p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
