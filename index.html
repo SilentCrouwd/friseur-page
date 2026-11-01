@@ -3,7 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MeinFriseur</title>
+    <title>MeinFriseur – Friseur in Musterstadt | Schnitt &amp; Farbe</title>
+    <meta
+      name="description"
+      content="Persönliche Beratung, typgerechte Schnitte und Farbe bei MeinFriseur in Musterstadt."
+    />
+    <meta name="theme-color" content="#faf5ec" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/hero-salon.webp"
+      fetchpriority="high"
+    />
+    <link rel="canonical" href="https://meinfriseur.example/friseur-page/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="MeinFriseur" />
+    <meta
+      property="og:title"
+      content="MeinFriseur – Friseur in Musterstadt | Schnitt &amp; Farbe"
+    />
+    <meta
+      property="og:description"
+      content="Persönliche Beratung, typgerechte Schnitte und Farbe bei MeinFriseur in Musterstadt."
+    />
+    <meta
+      property="og:url"
+      content="https://meinfriseur.example/friseur-page/"
+    />
+    <meta
+      property="og:image"
+      content="https://meinfriseur.example/friseur-page/social-preview.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Einblick in den Salon MeinFriseur in Musterstadt"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MeinFriseur – Friseur in Musterstadt | Schnitt &amp; Farbe"
+    />
+    <meta
+      name="twitter:description"
+      content="Persönliche Beratung, typgerechte Schnitte und Farbe bei MeinFriseur in Musterstadt."
+    />
+    <meta
+      name="twitter:image"
+      content="https://meinfriseur.example/friseur-page/social-preview.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Einblick in den Salon MeinFriseur in Musterstadt"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "MeinFriseur",
+        "description": "Persönliche Beratung, typgerechte Schnitte und Farbe bei MeinFriseur in Musterstadt.",
+        "url": "https://meinfriseur.example/friseur-page/",
+        "image": "https://meinfriseur.example/friseur-page/social-preview.jpg",
+        "telephone": "+491234567890",
+        "email": "info@meinfriseur.example",
+        "priceRange": "ab 25 €",
+        "founder": {
+          "@type": "Person",
+          "name": "Anna Beispiel"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Musterstraße 12",
+          "postalCode": "12345",
+          "addressLocality": "Musterstadt",
+          "addressCountry": "DE"
+        },
+        "areaServed": "Musterstadt",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "14:00"
+          }
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "45",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Damenschnitt"
+            }
+          },
+          {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "28",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Herrenschnitt"
+            }
+          },
+          {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "65",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Färben"
+            }
+          },
+          {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "25",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Styling"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body
     class="min-h-screen bg-cream font-body text-base leading-relaxed text-ink"
@@ -14,9 +153,7 @@
     >
       Zum Inhalt springen
     </a>
-    <header
-      class="sticky top-0 z-40 border-b border-plum/10 bg-cream/95 shadow-soft backdrop-blur"
-    >
+    <header class="site-header sticky top-0 z-40">
       <div
         class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8"
       >
@@ -25,7 +162,7 @@
           class="flex shrink-0 items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plum-dark"
         >
           <span
-            class="grid size-11 place-items-center rounded-lg bg-plum font-display text-2xl text-white shadow-soft"
+            class="brand-mark grid size-11 place-items-center rounded-full bg-plum font-display text-2xl text-white shadow-soft"
             aria-hidden="true"
             >M</span
           >
@@ -94,6 +231,7 @@
             <span class="hidden text-sm font-semibold sm:inline">Anrufen</span>
           </a>
           <button
+            id="menu-button"
             type="button"
             aria-controls="site-navigation"
             aria-expanded="false"
@@ -122,57 +260,26 @@
       <section
         id="start"
         aria-labelledby="hero-title"
-        class="relative flex min-h-[calc(100svh-4.25rem)] flex-col overflow-hidden"
+        class="hero-section relative flex min-h-[calc(100svh-4.25rem)] flex-col overflow-hidden"
       >
-        <figure class="absolute inset-0" aria-hidden="true">
-          <div class="absolute inset-0 bg-pink">
-            <div
-              class="absolute inset-4 grid place-items-center rounded-lg border border-plum/20 sm:inset-6 md:inset-8"
-            >
-              <svg
-                viewBox="0 0 64 64"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                class="size-20 text-plum/70"
-              >
-                <rect x="11" y="13" width="42" height="38" rx="5" />
-                <circle cx="25" cy="27" r="5" />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m15 46 12-11 8 7 6-5 8 9"
-                />
-              </svg>
-            </div>
-            <span
-              class="absolute bottom-24 left-0 right-0 text-center font-display text-xl text-ink/70"
-              >Bildplatzhalter – MeinFriseur</span
-            >
-          </div>
-          <figcaption class="sr-only">
-            Bildplatzhalter für den Friseursalon
-          </figcaption>
-        </figure>
+        <div class="hero-backdrop absolute inset-0" aria-hidden="true"></div>
         <div
-          class="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
+          class="hero-content relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
         >
-          <div
-            class="w-full max-w-3xl rounded-lg border border-white/70 bg-white/55 p-5 shadow-lift backdrop-blur-xl backdrop-saturate-150 sm:p-8 lg:ml-auto lg:p-10 lg:text-right"
-          >
+          <div class="hero-copy w-full max-w-3xl p-5 sm:p-8 lg:p-10">
             <p class="mb-4 font-semibold tracking-wide text-plum-dark">
-              Willkommen bei MeinFriseur
+              MEINFRISEUR · MUSTERSTADT
             </p>
             <h1
               id="hero-title"
               class="font-display text-4xl font-semibold leading-tight text-ink sm:text-5xl lg:text-6xl"
             >
-              Ihr Friseur in Musterstadt –
-              <span class="text-plum-dark">rufen Sie uns an</span>
+              Ihr Stil.<br />
+              Unser Handwerk.
             </h1>
-            <p class="mt-6 max-w-xl text-lg lg:ml-auto">
-              Zeit für einen neuen Lieblingslook? Wir nehmen uns Zeit für Sie
-              und beraten Sie persönlich.
+            <p class="mt-6 max-w-xl text-lg">
+              Ein guter Haarschnitt fühlt sich ganz nach Ihnen an. Wir nehmen
+              uns Zeit, hören zu und finden gemeinsam Ihren neuen Lieblingslook.
             </p>
             <a
               href="tel:+491234567890"
@@ -192,22 +299,22 @@
                   d="M3 5.5A2.5 2.5 0 0 1 5.5 3h2A1.5 1.5 0 0 1 9 4.2l.8 3.2a1.5 1.5 0 0 1-.7 1.7l-1.4.9a15.7 15.7 0 0 0 6.5 6.5l.9-1.4a1.5 1.5 0 0 1 1.7-.7l3.2.8a1.5 1.5 0 0 1 1.2 1.5v2A2.5 2.5 0 0 1 18.7 21C10 20.5 3.5 14 3 5.5Z"
                 />
               </svg>
-              Jetzt anrufen: 01234 567890
+              Termin telefonisch anfragen
             </a>
             <ul
               aria-label="Ihre Vorteile"
-              class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end"
+              class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
             >
               <li
                 class="rounded-lg bg-pink-light px-4 py-2 font-medium text-ink"
               >
-                <span class="font-semibold text-plum-dark">15 Jahre</span>
-                Erfahrung
+                <span class="font-semibold text-ink">Mit Ruhe</span>
+                und viel Gespür
               </li>
               <li
                 class="rounded-lg bg-pink-light px-4 py-2 font-medium text-ink"
               >
-                Persönliche Beratung
+                Persönlich für Sie da
               </li>
             </ul>
           </div>
@@ -242,36 +349,22 @@
               Unser Salon &amp; unsere Arbeit
             </h2>
             <p class="mt-4">
-              Ein kleiner Eindruck von unserem Salon und den Looks, die hier
-              entstehen.
+              Bildinspirationen rund um Salon, Styling und persönliche Looks.
             </p>
           </div>
           <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
             <figure
               class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
             >
-              <div
-                role="img"
-                aria-label="Platzhalter: entspannte Atmosphäre im Salon"
-                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink"
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  class="size-12 text-plum/70 sm:size-16"
-                >
-                  <rect x="11" y="13" width="42" height="38" rx="5" />
-                  <circle cx="25" cy="27" r="5" />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m15 46 12-11 8 7 6-5 8 9"
-                  />
-                </svg>
-              </div>
+              <img
+                src="./images/salon-interior.webp"
+                alt="Heller Friseursalon mit Stylingplätzen"
+                width="900"
+                height="675"
+                loading="lazy"
+                decoding="async"
+                class="gallery-photo rounded-lg"
+              />
               <figcaption class="px-2 py-3 font-medium text-ink">
                 Wohlfühlen im Salon
               </figcaption>
@@ -279,28 +372,15 @@
             <figure
               class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
             >
-              <div
-                role="img"
-                aria-label="Platzhalter: moderner Haarschnitt"
-                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink-light"
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  class="size-12 text-plum/70 sm:size-16"
-                >
-                  <rect x="11" y="13" width="42" height="38" rx="5" />
-                  <circle cx="25" cy="27" r="5" />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m15 46 12-11 8 7 6-5 8 9"
-                  />
-                </svg>
-              </div>
+              <img
+                src="./images/style-inspiration-1.webp"
+                alt="Frau mit kurzem blondem Bob im Freien"
+                width="900"
+                height="1349"
+                loading="lazy"
+                decoding="async"
+                class="gallery-photo rounded-lg"
+              />
               <figcaption class="px-2 py-3 font-medium text-ink">
                 Schnitt mit Persönlichkeit
               </figcaption>
@@ -308,57 +388,31 @@
             <figure
               class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
             >
-              <div
-                role="img"
-                aria-label="Platzhalter: Farbberatung im Salon"
-                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink"
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  class="size-12 text-plum/70 sm:size-16"
-                >
-                  <rect x="11" y="13" width="42" height="38" rx="5" />
-                  <circle cx="25" cy="27" r="5" />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m15 46 12-11 8 7 6-5 8 9"
-                  />
-                </svg>
-              </div>
+              <img
+                src="./images/salon-visit.webp"
+                alt="Entspannter Friseurbesuch beim Waschen und Stylen"
+                width="900"
+                height="601"
+                loading="lazy"
+                decoding="async"
+                class="gallery-photo rounded-lg"
+              />
               <figcaption class="px-2 py-3 font-medium text-ink">
-                Farbe, die zu Ihnen passt
+                Eine entspannte Auszeit
               </figcaption>
             </figure>
             <figure
               class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
             >
-              <div
-                role="img"
-                aria-label="Platzhalter: professionelles Styling"
-                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink-light"
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  class="size-12 text-plum/70 sm:size-16"
-                >
-                  <rect x="11" y="13" width="42" height="38" rx="5" />
-                  <circle cx="25" cy="27" r="5" />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m15 46 12-11 8 7 6-5 8 9"
-                  />
-                </svg>
-              </div>
+              <img
+                src="./images/style-inspiration-2.webp"
+                alt="Langes blondes Haar als Styling-Inspiration"
+                width="900"
+                height="1348"
+                loading="lazy"
+                decoding="async"
+                class="gallery-photo rounded-lg"
+              />
               <figcaption class="px-2 py-3 font-medium text-ink">
                 Styling für besondere Momente
               </figcaption>
@@ -366,59 +420,33 @@
             <figure
               class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
             >
-              <div
-                role="img"
-                aria-label="Platzhalter: freundliches Team im Salon"
-                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink"
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  class="size-12 text-plum/70 sm:size-16"
-                >
-                  <rect x="11" y="13" width="42" height="38" rx="5" />
-                  <circle cx="25" cy="27" r="5" />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m15 46 12-11 8 7 6-5 8 9"
-                  />
-                </svg>
-              </div>
+              <img
+                src="./images/long-hair.webp"
+                alt="Langes blondes Haar vor rosa Hintergrund"
+                width="900"
+                height="1350"
+                loading="lazy"
+                decoding="async"
+                class="gallery-photo rounded-lg"
+              />
               <figcaption class="px-2 py-3 font-medium text-ink">
-                Mit Herz für Ihr Haar
+                Stil, der zu Ihnen passt
               </figcaption>
             </figure>
             <figure
               class="rounded-lg bg-white p-2 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lift motion-reduce:transition-none sm:p-3"
             >
-              <div
-                role="img"
-                aria-label="Platzhalter: Ergebnis eines Friseurbesuchs"
-                class="grid aspect-[4/3] place-items-center rounded-lg bg-pink-light"
-              >
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  class="size-12 text-plum/70 sm:size-16"
-                >
-                  <rect x="11" y="13" width="42" height="38" rx="5" />
-                  <circle cx="25" cy="27" r="5" />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m15 46 12-11 8 7 6-5 8 9"
-                  />
-                </svg>
-              </div>
+              <img
+                src="./images/style-inspiration-3.webp"
+                alt="Frau mit langem Haar und Jeansjacke"
+                width="900"
+                height="600"
+                loading="lazy"
+                decoding="async"
+                class="gallery-photo rounded-lg"
+              />
               <figcaption class="px-2 py-3 font-medium text-ink">
-                Ihr neuer Lieblingslook
+                Ideen für den nächsten Look
               </figcaption>
             </figure>
           </div>
@@ -748,7 +776,7 @@
             class="inline-flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
             <span
-              class="grid size-10 place-items-center rounded-lg bg-white font-display text-xl font-semibold text-plum-dark"
+              class="brand-mark grid size-10 place-items-center rounded-full bg-white font-display text-xl font-semibold text-plum-dark"
               aria-hidden="true"
               >M</span
             >

@@ -1,0 +1,16 @@
+{
+  "name": "MeinFriseur",
+  "short_name": "MeinFriseur",
+  "start_url": "/friseur-page/",
+  "scope": "/friseur-page/",
+  "display": "standalone",
+  "background_color": "#faf5ec",
+  "theme_color": "#faf5ec",
+  "icons": [
+    {
+      "src": "/friseur-page/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

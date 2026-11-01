@@ -1,6 +1,6 @@
 import "./style.css";
 
-const menuButton = document.querySelector('[aria-controls="site-navigation"]');
+const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector("#site-navigation");
 
 function setMenuOpen(isOpen) {
@@ -16,27 +16,26 @@ menuButton.addEventListener("click", () => {
   setMenuOpen(menuButton.getAttribute("aria-expanded") !== "true");
 });
 
+const mobileViewport = window.matchMedia("(max-width: 767px)");
+const desktopViewport = window.matchMedia("(min-width: 768px)");
+
 navigation.addEventListener("click", (event) => {
-  if (
-    event.target.closest("a") &&
-    window.matchMedia("(max-width: 767px)").matches
-  ) {
+  const clickedLink = event.target.closest("a");
+  if (clickedLink && mobileViewport.matches) {
     setMenuOpen(false);
     menuButton.focus();
   }
 });
 
 document.addEventListener("keydown", (event) => {
-  if (
-    event.key === "Escape" &&
-    menuButton.getAttribute("aria-expanded") === "true"
-  ) {
+  const isMenuOpen = menuButton.getAttribute("aria-expanded") === "true";
+  if (event.key === "Escape" && isMenuOpen) {
     setMenuOpen(false);
     menuButton.focus();
   }
 });
 
-window.matchMedia("(min-width: 768px)").addEventListener("change", (event) => {
+desktopViewport.addEventListener("change", (event) => {
   if (event.matches) setMenuOpen(false);
 });
 
@@ -55,12 +54,12 @@ const openingHours = {
 };
 const weekdayFormatter = new Intl.DateTimeFormat("de-DE", { weekday: "long" });
 
-const todayRow = document.querySelector(
-  `[data-weekday="${new Date().getDay()}"]`,
-);
+const todayWeekday = new Date().getDay();
+const todayRow = document.querySelector(`[data-weekday="${todayWeekday}"]`);
+const todayBadge = todayRow.querySelector(".today-badge");
 todayRow.classList.add("bg-pink-light");
 todayRow.setAttribute("aria-current", "date");
-todayRow.querySelector(".today-badge").classList.remove("hidden");
+todayBadge.classList.remove("hidden");
 
 function updateOpeningStatus() {
   const now = new Date();

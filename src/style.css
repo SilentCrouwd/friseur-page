@@ -18,11 +18,262 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--color-cream);
+  letter-spacing: 0.005em;
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+.site-header {
+  border-bottom: 1px solid rgb(31 41 51 / 0.08);
+  background: rgb(250 245 236 / 0.94);
+  backdrop-filter: blur(16px);
+}
+
+.brand-mark {
+  box-shadow: none;
+}
+
+#site-navigation a {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+#start.hero-section {
+  min-height: min(820px, calc(100svh - 4.25rem));
+  isolation: isolate;
+  justify-content: center;
+  background: var(--color-cream);
+}
+
+.hero-backdrop {
+  z-index: 0;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(250 245 236 / 0.98) 0%,
+      rgb(250 245 236 / 0.9) 42%,
+      rgb(250 245 236 / 0.48) 72%,
+      rgb(250 245 236 / 0.2) 100%
+    ),
+    url("/images/hero-salon.webp"),
+    radial-gradient(
+      ellipse at 78% 42%,
+      rgb(107 79 122 / 0.24) 0 14%,
+      transparent 15%
+    ),
+    radial-gradient(
+      ellipse at 86% 54%,
+      rgb(243 201 213 / 0.85) 0 25%,
+      transparent 26%
+    ),
+    linear-gradient(135deg, #faf5ec 0%, #fbe6ec 100%);
+  background-position: center, 58% center, center, center, center;
+  background-size: cover;
+}
+
+.hero-copy {
+  max-width: 52rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hero-copy > p:first-child {
+  color: var(--color-plum-dark);
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
+}
+
+#hero-title {
+  max-width: 11ch;
+  font-size: clamp(3.2rem, 7vw, 6.7rem);
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.hero-copy > p:nth-of-type(2) {
+  max-width: 34rem;
+  color: rgb(31 41 51 / 0.85);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.hero-copy > a {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+#start ul[aria-label="Ihre Vorteile"] li {
+  border: 1px solid rgb(31 41 51 / 0.1);
+  border-radius: var(--radius-lg);
+  background: rgb(255 255 255 / 0.78);
+  font-size: 0.9rem;
+}
+
+#start output {
+  border: 1px solid rgb(31 41 51 / 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 26px -18px rgb(107 79 122 / 0.3);
+}
+
+#galerie,
+#anfahrt {
+  background-color: var(--color-pink-light);
+}
+
+#galerie h2,
+#oeffnungszeiten h2,
+#anfahrt h2,
+#kontakt h2 {
+  letter-spacing: -0.04em;
+}
+
+#galerie figure {
+  overflow: hidden;
+  border: 1px solid rgb(31 41 51 / 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 14px 32px -24px rgb(107 79 122 / 0.35);
+}
+
+.gallery-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+#oeffnungszeiten table,
+#kontakt a[href^="tel"],
+#kontakt a[href^="mailto"],
+#contact-form {
+  border-radius: 1rem;
+}
+
+#oeffnungszeiten table {
+  overflow: hidden;
+  box-shadow: 0 16px 38px -28px rgb(107 79 122 / 0.35);
+}
+
+#oeffnungszeiten thead {
+  background-color: var(--color-pink-light);
+}
+
+#anfahrt [role="img"] {
+  width: 100%;
+  min-width: 0;
+  min-height: 18rem;
+  border: 1px solid rgb(31 41 51 / 0.1);
+  background-color: var(--color-pink-light);
+  background-image:
+    linear-gradient(28deg, transparent 47%, rgb(255 255 255 / 0.75) 48%, rgb(255 255 255 / 0.75) 51%, transparent 52%),
+    linear-gradient(118deg, transparent 44%, rgb(255 255 255 / 0.65) 45%, rgb(255 255 255 / 0.65) 48%, transparent 49%),
+    radial-gradient(ellipse at 70% 22%, rgb(107 79 122 / 0.2) 0 12%, transparent 13%),
+    radial-gradient(ellipse at 18% 82%, rgb(107 79 122 / 0.14) 0 15%, transparent 16%);
+}
+
+#kontakt {
+  background-color: var(--color-cream);
+}
+
+#contact-form,
+#kontakt a[href^="tel"],
+#kontakt a[href^="mailto"] {
+  border: 1px solid rgb(31 41 51 / 0.08);
+  box-shadow: 0 16px 36px -28px rgb(107 79 122 / 0.35);
+}
+
+#contact-form input:not([type="checkbox"]),
+#contact-form textarea {
+  border: 1px solid rgb(31 41 51 / 0.12);
+  box-shadow: none;
+}
+
+footer {
+  background-color: var(--color-plum-dark);
+}
+
+footer .brand-mark {
+  color: var(--color-plum-dark);
+}
+
+@media (max-width: 767px) {
+  #start.hero-section {
+    min-height: 0;
+  }
+
+  #start > .hero-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .hero-backdrop {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgb(250 245 236 / 0.08) 0%,
+        rgb(250 245 236 / 0.58) 24%,
+        rgb(250 245 236 / 0.96) 48%,
+        #faf5ec 72%
+      ),
+      url("/images/hero-salon.webp"),
+      radial-gradient(
+        ellipse at 66% 20%,
+        rgb(107 79 122 / 0.22) 0 18%,
+        transparent 19%
+      ),
+      radial-gradient(
+        ellipse at 35% 12%,
+        rgb(243 201 213 / 0.82) 0 26%,
+        transparent 27%
+      ),
+      linear-gradient(135deg, #faf5ec 0%, #fbe6ec 100%);
+    background-position: center, 55% top, center, center, center;
+    background-size: cover;
+  }
+
+  .hero-copy {
+    margin-top: 4rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #hero-title {
+    font-size: clamp(3rem, 13vw, 4.25rem);
+  }
+
+  #start .hero-copy > a {
+    margin-top: 1.5rem;
+  }
+
+  #start ul[aria-label="Ihre Vorteile"] {
+    margin-top: 1.25rem;
+    gap: 0.5rem;
+  }
+
+  #start output {
+    max-width: calc(100% - 2rem);
+  }
+
+  #anfahrt [role="img"] {
+    aspect-ratio: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  *,
+  *::before,
+  *::after {
     scroll-behavior: auto;
+    animation: none !important;
+    transition: none !important;
   }
 }
 
